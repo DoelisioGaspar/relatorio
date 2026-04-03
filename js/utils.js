@@ -81,8 +81,8 @@ function normalizeStr(str) {
 
 // Logout
 function logout() {
-    sessionStorage.removeItem('currentUser');
-    window.location.href = 'index.html';
+    localStorage.removeItem('currentSession');
+    window.location.replace('index.html');
 }
 
 // Populate year selects
