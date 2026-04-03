@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Relatórios de Serviço</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab active" data-tab="admin-login">
+                <i class="fas fa-user-shield"></i> Admin
+            </button>
+            <button class="tab" data-tab="pub-login">
+                <i class="fas fa-user"></i> Publicador
+            </button>
+            <button class="tab" data-tab="admin-register">
+                <i class="fas fa-user-plus"></i> Criar Admin
+            </button>
+        </div>
+
+        <!-- Admin Login -->
+        <div class="tab-content active" id="admin-login">
+            <div class="form-header">
+                <i class="fas fa-user-shield icon-large"></i>
+                <h2>Entrar como Admin</h2>
+            </div>
+            <form id="formAdminLogin">
+                <div class="form-group">
+                    <label><i class="fas fa-user"></i> Nome</label>
+                    <input type="text" id="adminLoginNome" required placeholder="Seu nome de admin">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-lock"></i> Senha</label>
+                    <input type="password" id="adminLoginSenha" required placeholder="Sua senha">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-users"></i> Grupo</label>
+                    <input type="text" id="adminLoginGrupo" required placeholder="Ex: Grupo 4">
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">
+                    <i class="fas fa-sign-in-alt"></i> Entrar
+                </button>
+            </form>
+        </div>
+
+        <!-- Publicador Login -->
+        <div class="tab-content" id="pub-login">
+            <div class="form-header">
+                <i class="fas fa-user icon-large"></i>
+                <h2>Entrar como Publicador</h2>
+            </div>
+            <form id="formPubLogin">
+                <div class="form-group">
+                    <label><i class="fas fa-user"></i> Nome completo</label>
+                    <input type="text" id="pubLoginNome" required placeholder="Ex: Doelísio Gaspar">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-users"></i> Grupo</label>
+                    <input type="text" id="pubLoginGrupo" required placeholder="Ex: Grupo 4">
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">
+                    <i class="fas fa-sign-in-alt"></i> Entrar
+                </button>
+            </form>
+        </div>
+
+        <!-- Admin Register -->
+        <div class="tab-content" id="admin-register">
+            <div class="form-header">
+                <i class="fas fa-user-plus icon-large"></i>
+                <h2>Criar Conta de Admin</h2>
+            </div>
+            <form id="formAdminRegister">
+                <div class="form-group">
+                    <label><i class="fas fa-user"></i> Nome</label>
+                    <input type="text" id="adminRegNome" required placeholder="Seu nome">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-lock"></i> Senha</label>
+                    <input type="password" id="adminRegSenha" required placeholder="Crie uma senha">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-lock"></i> Confirmar Senha</label>
+                    <input type="password" id="adminRegSenhaConfirm" required placeholder="Confirme a senha">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-users"></i> Nome do Grupo</label>
+                    <input type="text" id="adminRegGrupo" required placeholder="Ex: Grupo 4">
+                </div>
+                <button type="submit" class="btn btn-success btn-full">
+                    <i class="fas fa-check"></i> Criar Conta
+                </button>
+            </form>
+        </div>
+
+        <div id="loginMsg" class="message hidden"></div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
